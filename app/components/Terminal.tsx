@@ -8,6 +8,7 @@ import {
   Circle,
   ArrowRight,
   Github,
+  FileDown,
 } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
@@ -30,17 +31,18 @@ const TreeNode = ({ title, content }) => (
   </motion.div>
 );
 
+//NOTE: Project Card
 const ProjectCard = ({ name, description, githubLink, technologies }) => (
   <motion.div
-    className="sm:mb-4 sm:text-sm mb-8 font-mono "
+    className=" mb-6 md:mb-8 font-mono "
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
   >
-    <h3 className="sm:text-base text-lg font-bold mb-2">{name}</h3>
-    <div className="sm:ml-2 ml-4 space-y-2">
+    <h3 className="text-base md:text-lg font-bold mb-2">{name}</h3>
+    <div className="ml-2 md:ml-4 space-y-2">
       <div className="flex items-start">
         <span className="mr-2">*</span>
-        <span>Description</span>
+        <span className="text-sm md:text-base">Description</span>
       </div>
       <div className="flex items-start ml-4">
         <ArrowRight className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />
@@ -54,7 +56,7 @@ const ProjectCard = ({ name, description, githubLink, technologies }) => (
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="sm:text-xs text-sm text-blue-600 hover:underline"
+          className="sm:text-xs md:text-base text-blue-600 hover:underline"
         >
           {githubLink}
         </a>
@@ -62,13 +64,13 @@ const ProjectCard = ({ name, description, githubLink, technologies }) => (
 
       <div className="flex items-start">
         <span className="mr-2">*</span>
-        <span>Tech Stacks</span>
+        <span className="text-sm md:text-base">Tech Stacks</span>
       </div>
       <div className="ml-4">
         {technologies.map((tech, index) => (
           <div key={index} className="flex items-center">
             <span className="mr-2">*</span>
-            <span>{tech}</span>
+            <span className="text-sm md:text-base">{tech}</span>
           </div>
         ))}
       </div>
@@ -82,12 +84,16 @@ const TypedContent = ({ text, speed = 50, className = "" }) => (
     wrapper="p"
     speed={speed}
     cursor={false}
-    className={`sm:text-xs sm:leading-snug md:text-lg text-base leading-relaxed ${className}`}
+    className={`text-sm md:text-base leading-relaxed ${className}`}
   />
 );
 
 const Terminal = () => {
   const [activeSection, setActiveSection] = useState("intro");
+
+  const handleResumeClick = () => {
+    window.open("/resume/Resume.pdf", "_blank");
+  };
   const sections = {
     intro: {
       title: "Introduction",
@@ -160,7 +166,7 @@ const Terminal = () => {
     projects: {
       title: "Projects",
       content: (
-        <div className="sm:pr-2 sm:max-h-none  sm:space-y-4   space-y-6 overflow-y-auto max-h-[500px] pr-4">
+        <div className="space-y-4 overflow-y-auto md:max-h-[70vh] sm:max-h-[85vh] pr-2">
           <ProjectCard
             name="Math Nest Dictionary"
             description="I developed a web application that help student quickly look up math formulas with friendly and simple UI."
@@ -203,8 +209,8 @@ const Terminal = () => {
   };
 
   return (
-    <div className="sm:p-2 sm:min-h-fit min-h-[600px] bg-[#F1F0E8] p-5 flex flex-col items-center justify-center space-y-4">
-      <div className="w-full max-w-3xl flex-col flex items-center space-y-4">
+    <div className="w-full flex flex-col items-center justify-center">
+      <div className="w-full max-w-3xl flex-col flex items-center space-y-4 py-2">
         {/* Navigation Buttons */}
         <div className="sm:text-sm flex space-x-4 ">
           <motion.button
@@ -231,12 +237,30 @@ const Terminal = () => {
           >
             Projects
           </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="sm:px-3 sm:py-1.5 px-4 py-2 rounded-md bg-white text-gray-800 flex items-center space-x-2"
+            onClick={handleResumeClick}
+          >
+            <span>Resume</span>
+          </motion.button>
+
+          <motion.a
+            href="mailto:hnguyen1193@csu.fullerton.edu"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="sm:px-3 sm:py-1.5 px-4 py-2 rounded-md bg-white text-gray-800 flex items-center space-x-2 cursor-pointer"
+          >
+            <span>Contact</span>
+          </motion.a>
         </div>
       </div>
 
       {/* Terminal Window */}
       <motion.div
-        className="sm:p-3 sm:h-[85vh] sm:overflow-y-auto md:p-6 bg-[#89A8B2] p-4 rounded-lg shadow-lg w-full mx-auto max-w-4xl "
+        className="sm:p-3 md:p-6 p-2 bg-[#89A8B2] rounded-lg shadow-lg w-full mx-auto max-w-4xl overflow-auto"
         initial={{ scale: 0, rotate: 0 }}
         animate={{ scale: 1, rotate: 360 }}
         transition={{
