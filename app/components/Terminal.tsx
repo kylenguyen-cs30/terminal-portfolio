@@ -14,13 +14,13 @@ import Image from "next/image";
 
 const TreeNode = ({ title, content }) => (
   <motion.div
-    className="sm:text-sm text-base  font-mono text-gray-800"
+    className="sm:text-sm text-base md:text-lg  font-mono text-gray-800"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 0.5 }}
   >
-    <div className="flex items-center mb-2">
-      <ChevronRight className="sm:mr-1 sm:w-3 sm:h-3 4mr-2 w-4 h-4" />
+    <div className="flex items-center ">
+      <ChevronRight className="sm:mr-1 sm:w-3 sm:h-3 mr-2 w-4 h-4" />
       <span className="font-semibold">{title}</span>
     </div>
     <div className="sm:ml-2 ml-4 flex">
@@ -32,7 +32,7 @@ const TreeNode = ({ title, content }) => (
 
 const ProjectCard = ({ name, description, githubLink, technologies }) => (
   <motion.div
-    className="sm:mb-4 sm:text-sm mb-6 font-mono "
+    className="sm:mb-4 sm:text-sm mb-8 font-mono "
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
   >
@@ -54,7 +54,7 @@ const ProjectCard = ({ name, description, githubLink, technologies }) => (
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
+          className="sm:text-xs text-sm text-blue-600 hover:underline"
         >
           {githubLink}
         </a>
@@ -82,7 +82,7 @@ const TypedContent = ({ text, speed = 50, className = "" }) => (
     wrapper="p"
     speed={speed}
     cursor={false}
-    className={`sm:text-xs sm:leading-snug  leading-relaxed ${className}`}
+    className={`sm:text-xs sm:leading-snug md:text-lg text-base leading-relaxed ${className}`}
   />
 );
 
@@ -92,9 +92,9 @@ const Terminal = () => {
     intro: {
       title: "Introduction",
       content: (
-        <div className="space-y-4">
+        <div className="space-y-6">
           {/* Introduction Part */}
-          <div className="space-y-2">
+          <div className="space-y-4">
             <div className="flex items-center space-x-4">
               <div className="bg-gray-200 p-2 rounded-full">
                 <Image
@@ -105,7 +105,7 @@ const Terminal = () => {
                   className=" rounded-full object-cover"
                 />
               </div>
-              <h2 className="sm:text-lg text-xl font-bold">
+              <h2 className="sm:text-lg text-lg md:text-xl font-bold">
                 Hello, my name is Kyle Nguyen
               </h2>
             </div>
@@ -122,9 +122,9 @@ const Terminal = () => {
           <div className="space-y-2">
             <div className="flex items-center space-x-4">
               <div className="bg-gray-200 p-2 rounded-full">
-                <Code2 className="w-6 h-6" />
+                <Code2 className="sm:w-5 sm:h-5 w-6 h-6" />
               </div>
-              <h3 className="sm:text-base text-lg font-semibold">
+              <h3 className="sm:text-base md:text-lg font-semibold">
                 Software Development
               </h3>
             </div>
@@ -139,7 +139,7 @@ const Terminal = () => {
           <div className="space-y-2">
             <div className="flex items-center space-x-4">
               <div className="bg-gray-200 p-2 rounded-full">
-                <UsersRound className="w-6 h-6" />
+                <UsersRound className="sm:w-5 sm:h-5 w-6 h-6" />
               </div>
               <h3 className="sm:text-base text-lg font-semibold">
                 Communication
@@ -160,7 +160,7 @@ const Terminal = () => {
     projects: {
       title: "Projects",
       content: (
-        <div className="sm:pr-2 sm:max-h-none sm:overscroll-visible sm:space-y-4   space-y-6 overflow-y-auto max-h-[500px] pr-4">
+        <div className="sm:pr-2 sm:max-h-none  sm:space-y-4   space-y-6 overflow-y-auto max-h-[500px] pr-4">
           <ProjectCard
             name="Math Nest Dictionary"
             description="I developed a web application that help student quickly look up math formulas with friendly and simple UI."
@@ -236,7 +236,7 @@ const Terminal = () => {
 
       {/* Terminal Window */}
       <motion.div
-        className="sm:p-3 sm:h-[85vh] sm:overflow-y-auto bg-[#89A8B2] p-6 rounded-lg shadow-lg w-full "
+        className="sm:p-3 sm:h-[85vh] sm:overflow-y-auto md:p-6 bg-[#89A8B2] p-4 rounded-lg shadow-lg w-full mx-auto max-w-4xl "
         initial={{ scale: 0, rotate: 0 }}
         animate={{ scale: 1, rotate: 360 }}
         transition={{
