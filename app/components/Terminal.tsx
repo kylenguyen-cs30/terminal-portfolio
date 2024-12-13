@@ -8,12 +8,16 @@ import {
   Circle,
   ArrowRight,
   Github,
-  FileDown,
 } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
+import { Speed, GranularSpeed } from "../types/animations";
 
-const TreeNode = ({ title, content }) => (
+interface TreeNodeProps {
+  title: string;
+  content: React.ReactNode;
+}
+const TreeNode: React.FC<TreeNodeProps> = ({ title, content }) => (
   <motion.div
     className="sm:text-sm text-base md:text-lg  font-mono text-gray-800"
     initial={{ opacity: 0 }}
@@ -31,8 +35,20 @@ const TreeNode = ({ title, content }) => (
   </motion.div>
 );
 
+interface ProjectCardProps {
+  name: string;
+  description: string;
+  githubLink: string;
+  technologies: string[];
+}
+
 //NOTE: Project Card
-const ProjectCard = ({ name, description, githubLink, technologies }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  name,
+  description,
+  githubLink,
+  technologies,
+}) => (
   <motion.div
     className=" mb-6 md:mb-8 font-mono "
     initial={{ opacity: 0 }}
@@ -78,7 +94,17 @@ const ProjectCard = ({ name, description, githubLink, technologies }) => (
   </motion.div>
 );
 
-const TypedContent = ({ text, speed = 50, className = "" }) => (
+interface TypedContentProps {
+  text: string;
+  speed?: Speed | GranularSpeed;
+  className?: string;
+}
+
+const TypedContent: React.FC<TypedContentProps> = ({
+  text,
+  speed = 50 as Speed,
+  className = "",
+}) => (
   <TypeAnimation
     sequence={[text]}
     wrapper="p"
@@ -88,8 +114,11 @@ const TypedContent = ({ text, speed = 50, className = "" }) => (
   />
 );
 
-const Terminal = () => {
-  const [activeSection, setActiveSection] = useState("intro");
+// Add type for the active section
+type SectionKey = "intro" | "projects";
+
+const Terminal: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<SectionKey>("intro");
 
   const handleResumeClick = () => {
     window.open("/resume/Resume.pdf", "_blank");
