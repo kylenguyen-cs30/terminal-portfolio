@@ -148,7 +148,7 @@ const Terminal: React.FC = () => {
               text="I am a Software Engineer.I am studying Computer Science at Californiate State University, Fullerton
             . I have been coding since I was in highschool especially web development and mobile application. 
               Thank you for reading!❤️"
-              speed={95}
+              speed={90}
               className="leading-relaxed"
             />
           </div>
@@ -165,7 +165,7 @@ const Terminal: React.FC = () => {
             </div>
             <TypedContent
               text="I have knowledge in common programming languages for web development, I am also familiar with tools like Docker, Git, 
-              AWS EC2 and Cloud Computing technologies for fast shipping applicaiton ."
+              AWS EC2 and Cloud Computing technologies for fast shipping application."
               speed={85}
               className="leading-relaxed"
             />
