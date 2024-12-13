@@ -223,7 +223,7 @@ const Terminal = () => {
             }`}
             onClick={() => setActiveSection("intro")}
           >
-            Intro
+            Introduction
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
