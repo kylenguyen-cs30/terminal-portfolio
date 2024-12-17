@@ -248,8 +248,8 @@ const Terminal: React.FC = () => {
           />
           <ProjectCard
             name="Tic Tac Toe"
-            description="Tic Tac Toe is a web application which is serving as a stepping stool for machine learning AI Development. Tic
-            Tac Toe have two player, one is user and the other is AI. User can pick between two modes 'PVP' and 'AI'."
+            description="Tic Tac Toe is a web application which is serving as a stepping stool for machine learning AI Development. The AI can learn 
+            from user's pattern."
             githubLink="https://github.com/kylenguyen-cs30/tictactoe-ml"
             technologies={["Typescript", "NextJS", "Machine Learning"]}
           />
@@ -263,7 +263,7 @@ const Terminal: React.FC = () => {
           <ProjectCard
             name="Parfummeler"
             description="Led a team of 3 members to develop a personalized e-commerce platform that connect users through perfumes. User's 
-            recommendation is more accurate than since they are asked with a set of question which are created by experts"
+            recommendation is more accurate than since they are asked with a set of questions which are created by experts."
             githubLink="https://github.com/kylenguyen-cs30/Parfummelier"
             technologies={[
               "NextJS",
