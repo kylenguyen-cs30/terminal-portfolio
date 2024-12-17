@@ -145,8 +145,8 @@ const Terminal: React.FC = () => {
               </h2>
             </div>
             <TypedContent
-              text="I am a Software Engineer.I am studying Computer Science at Californiate State University, Fullerton
-            . I have been coding since I was in highschool especially web development and mobile application. 
+              text="I am a Software Engineer. I am studying Computer Science at Californiate State University, Fullerton
+            . I love building web app  and mobile application. 
               Thank you for reading!❤️"
               speed={90}
               className="leading-relaxed"
@@ -230,6 +230,19 @@ const Terminal: React.FC = () => {
               "Docker",
               "Microservice",
               "Kong",
+            ]}
+          />
+
+          <ProjectCard
+            name="Enterty"
+            description="I developed an iOS application that significantly reduce the issue of the  "
+            githubLink="https://github.com/kylenguyen-cs30/Enterty"
+            technologies={[
+              "SwiftUI",
+              "Swift",
+              "PostgresSQL",
+              "FastAPI",
+              "Docker",
             ]}
           />
         </div>
