@@ -279,7 +279,9 @@ const Terminal: React.FC = () => {
 
           <ProjectCard
             name="Enterty"
-            description="I developed an iOS application that significantly reduce the issue of the  "
+            description="I created an iOS application designed to inspire users to discover new or old entertainment titles and provide an
+            enjoyable and captivating experience. The app has helped millions of users explore over 10,000 different titles, with an average 
+            user spending over 30 minutes each day revisiting old favorites and discovering new recommendations based on good ratings."
             githubLink="https://github.com/kylenguyen-cs30/Enterty"
             technologies={[
               "SwiftUI",
