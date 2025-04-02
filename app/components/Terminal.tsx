@@ -240,26 +240,7 @@ const Terminal: React.FC = () => {
       title: "Projects",
       content: (
         <div className="space-y-4 overflow-y-auto md:max-h-[70vh] sm:max-h-[85vh] pr-2">
-          <ProjectCard
-            name="Math Nest Dictionary"
-            description="I developed a web application that help student quickly look up math formulas with friendly and simple UI."
-            githubLink="https://github.com/kylenguyen-cs30/Math-Nest"
-            technologies={["NextJS", "SQLite"]}
-          />
-          <ProjectCard
-            name="Tic Tac Toe"
-            description="Tic Tac Toe is a web application which is serving as a stepping stool for machine learning AI Development. The AI can learn 
-            from user's pattern."
-            githubLink="https://github.com/kylenguyen-cs30/tictactoe-ml"
-            technologies={["Typescript", "NextJS", "Machine Learning"]}
-          />
-          <ProjectCard
-            name="Cau Chu"
-            description="A simple fast web application that deliver user experience and information about their pets and provide a safe place
-            for pet owner can safely find their pet a new home."
-            githubLink="https://github.com/kylenguyen-cs30/cau-chu"
-            technologies={["NextJS", "Flask", "SQLite"]}
-          />
+          {/* Parfummelier Project  */}
           <ProjectCard
             name="Parfummeler"
             description="Led a team of 3 members to develop a personalized e-commerce platform that connect users through perfumes. User's 
@@ -277,6 +258,16 @@ const Terminal: React.FC = () => {
             ]}
           />
 
+          {/* Tic tac toe Project  */}
+          <ProjectCard
+            name="Tic Tac Toe"
+            description="Tic Tac Toe is a web application which is serving as a stepping stool for machine learning AI Development. The AI can learn 
+            from user's pattern."
+            githubLink="https://github.com/kylenguyen-cs30/tictactoe-ml"
+            technologies={["Typescript", "NextJS", "Machine Learning"]}
+          />
+
+          {/* Enterty Project  */}
           <ProjectCard
             name="Enterty"
             description="I created an iOS application designed to inspire users to discover new or old entertainment titles and provide an
@@ -290,6 +281,15 @@ const Terminal: React.FC = () => {
               "FastAPI",
               "Docker",
             ]}
+          />
+
+          {/* Clippy Project */}
+          <ProjectCard
+            name="Clippy"
+            description="I created a desktop application that works multiple OS. Clippy help user to synchronize their Clipboard manager up to 10 devices. 
+            The application is created with Mutli-Threading processes so Application is working smoothly without downtime upto 90%."
+            githubLink="https://github.com/kylenguyen-cs30/Clippy"
+            technologies={["C#", "Avalonia", "UDP", "Multi-Thread"]}
           />
         </div>
       ),
