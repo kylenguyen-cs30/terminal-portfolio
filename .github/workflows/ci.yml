@@ -11,16 +11,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: Enable Corepack
+        run: corepacke enable
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run build
-      - run: tsc --noEmit
-      # - run: npm test   # Uncomment if you add tests
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Lint code
+        run: yarn lint
+      - name: Build Project
+        run: yarn build
+      - name: Type check
+        run: yarn tsc --noEmit
 
-      # Optional: Cache Next.js build output for faster CI
+      # - name: Run tests
+      # run: yarn test
+
       - uses: actions/cache@v4
         with:
           path: .next/cache
