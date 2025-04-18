@@ -291,6 +291,13 @@ const Terminal: React.FC = () => {
             githubLink="https://github.com/kylenguyen-cs30/Clippy"
             technologies={["C#", "Avalonia", "UDP", "Multi-Thread"]}
           />
+
+          <ProjectCard
+            name="Water Tracker"
+            description="I also design an iOS/Android app that helps users tracking their Water intake in 7 days. Users can also change the target amount and weight of the body in order to calculate the correct amount. The application is written in React Native therefore the application can run multiple platform and the app use Expo Sqlite to store users' data on device to maintain fast UI rendering and high performance application on any platform."
+            githubLink="https://github.com/kylenguyen-cs30/Water-Tracker"
+            technologies={["React Native", "Expo Sqlite"]}
+          />
         </div>
       ),
     },
