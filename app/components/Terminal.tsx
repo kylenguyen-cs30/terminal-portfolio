@@ -268,19 +268,27 @@ const Terminal: React.FC = () => {
           />
 
           {/* Enterty Project  */}
+          {/* <ProjectCard */}
+          {/*   name="Enterty" */}
+          {/*   description="I created an iOS application designed to inspire users to discover new or old entertainment titles and provide an */}
+          {/*   enjoyable and captivating experience. The app has helped millions of users explore over 10,000 different titles, with an average  */}
+          {/*   user spending over 30 minutes each day revisiting old favorites and discovering new recommendations based on good ratings." */}
+          {/*   githubLink="https://github.com/kylenguyen-cs30/Enterty" */}
+          {/*   technologies={[ */}
+          {/*     "SwiftUI", */}
+          {/*     "Swift", */}
+          {/*     "PostgresSQL", */}
+          {/*     "FastAPI", */}
+          {/*     "Docker", */}
+          {/*   ]} */}
+          {/* /> */}
+
+          {/* MCP Server AI Project  */}
           <ProjectCard
-            name="Enterty"
-            description="I created an iOS application designed to inspire users to discover new or old entertainment titles and provide an
-            enjoyable and captivating experience. The app has helped millions of users explore over 10,000 different titles, with an average 
-            user spending over 30 minutes each day revisiting old favorites and discovering new recommendations based on good ratings."
-            githubLink="https://github.com/kylenguyen-cs30/Enterty"
-            technologies={[
-              "SwiftUI",
-              "Swift",
-              "PostgresSQL",
-              "FastAPI",
-              "Docker",
-            ]}
+            name="Taskler MCP Server"
+            description="Taskler is an AI-Powered Task Scheduler for high productive user. The Application is pipelined with Langchain and LLama.cpp for fast response and sustainable performance upto 99%"
+            githubLink="https://github.com/kylenguyen-cs30/mcp-server-taskler"
+            technologies={["ExpressJS", "Langchain", "LLama.cpp"]}
           />
 
           {/* Clippy Project */}
