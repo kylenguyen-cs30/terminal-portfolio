@@ -122,7 +122,7 @@ const Terminal: React.FC = () => {
   const [activeSection, setActiveSection] = useState<SectionKey>("intro");
 
   const handleResumeClick = () => {
-    window.open("/resume/Resume2.pdf", "_blank");
+    window.open("/resume/resume.pdf", "_blank");
   };
   const sections = {
     intro: {
